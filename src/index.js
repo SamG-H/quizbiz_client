@@ -8,6 +8,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import App from './components/App'
 import QuizForm from './components/QuizForm'
 import Quiz from './components/Quiz'
+import { rootReducer } from './reducers/rootReducer'
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))
 
