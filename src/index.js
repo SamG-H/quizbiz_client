@@ -9,6 +9,7 @@ import App from './components/App'
 import QuizForm from './components/QuizForm'
 import Quiz from './components/Quiz'
 import { rootReducer } from './reducers/rootReducer'
+import QuizzesContainer from './components/QuizzesContainer';
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))
 
@@ -18,7 +19,7 @@ ReactDOM.render((
     <div>
       <Route exact path="/" component={App} />
       <Route exact path="/quizzes" component={Quiz} />
-      <Route exact path="/quiz/new" component={QuizForm} />
+      <Route exact path="/quiz/new" component={QuizzesContainer} />
     </div>
   </Router>
   </Provider>),
